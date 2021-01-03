@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Jogos</h5>
+                </div>
+                <hr>
+                <div class="col-lg-12">
+                    <div class="row botoes-acao">
+                        <button type="button" class="btn btn-dark" (click)="novo()">Novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row registros">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registros</h5>
+                </div>
+                <hr>
+                <table class="table table-responsive-lg table-striped table-bordered table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th style="width: 5% !important;" scope="col">#</th>
+                            <th style="width: 5% !important;" scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Genero</th>
+                            <th scope="col">Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let jogo of jogos">
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" (click)="editar(jogo)" >Editar</a>
+                                        <a class="dropdown-item" (click)="excluir(jogo)" >Excluir</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{jogo.id}}</td>
+                            <td>{{jogo.nome}}</td>
+                            <td>{{jogo.genero}}</td>
+                            <td>{{jogo.situacao}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

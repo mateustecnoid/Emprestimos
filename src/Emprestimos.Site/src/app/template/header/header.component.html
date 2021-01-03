@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" [routerLink]="['/emprestimos/']">Emprestimo de Jogos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">          
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/amigos/']">Amigos</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/emprestimos/']">Emprestimos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/jogos/']">Jogos</a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <span class="usuario-logado">
+                Usuário logado: <strong>{{usuario}}</strong> - <a class="sair" (click)="Sair()">Sair</a>
+            </span>            
+        </div>
+    </div>
+</nav>

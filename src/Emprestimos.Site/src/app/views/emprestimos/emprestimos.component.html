@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Emprestimos</h5>
+                </div>
+                <hr>
+                <div class="col-lg-12">
+                    <div class="row botoes-acao">
+                        <button type="button" class="btn btn-dark" (click)="novo()">Novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row registros">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registros</h5>
+                </div>
+                <hr>
+                <table class="table table-responsive-lg table-striped table-bordered table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th style="width: 5% !important;" scope="col">#</th>
+                            <th style="width: 5% !important;" scope="col">Id</th>
+                            <th scope="col">Amigo</th>
+                            <th scope="col">Jogo</th>
+                            <th scope="col">Data de Emprestimo</th>
+                            <th scope="col">Data de Devolução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let emprestimo of emprestimos">
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" (click)="excluir(emprestimo)" >Excluir</a>
+                                        <a class="dropdown-item" *ngIf="!emprestimo.dataDevolucao" (click)="devolver(emprestimo)" >Devolver</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{emprestimo.id}}</td>
+                            <td>{{emprestimo.amigo.apelido}}</td>
+                            <td>{{emprestimo.jogo.nome}}</td>
+                            <td>{{emprestimo.dataEmprestimo | date: 'dd/MM/yyyy - HH:mm'}}</td>
+                            <td>{{emprestimo.dataDevolucao | date: 'dd/MM/yyyy - HH:mm'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

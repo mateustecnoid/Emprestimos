@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emprestimos</name>
+    </assembly>
+    <members>
+        <member name="M:Emprestimos.Controllers.AmigoController.Inserir(Emprestimos.Application.Dto.Request.AmigoRequest)">
+            <summary>
+            Insere um novo Amigo
+            </summary>
+            <param name="request">Dados de cadastro do Amigo</param>
+            <returns>Amigo cadastrado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.AmigoController.ObterPorId(System.Int64)">
+            <summary>
+            Obtem um Amigo por Id
+            </summary>
+            <param name="id">Id do Amigo</param>
+            <returns>Amigo obtido</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.AmigoController.Obter">
+            <summary>
+            Obtem todos os Amigos
+            </summary>
+            <returns>Todos os Amigos</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.AmigoController.Atualizar(System.Int64,Emprestimos.Application.Dto.Request.AmigoRequest)">
+            <summary>
+            Atualiza um Amigo
+            </summary>
+            <param name="id">Id do Amigo</param>
+            <param name="request">Dados de cadastro do Amigo</param>
+            <returns>Amigo atualizado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.AmigoController.Remover(System.Int64)">
+            <summary>
+            Remove um Amigo cadastrado
+            </summary>
+            <param name="id">Id do Amigo</param>
+            <returns></returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.AmigoController.DevolverTodos(System.Int64)">
+            <summary>
+            Devolve todos os jogos de um amigo
+            </summary>
+            <param name="id">Id do amigo</param>
+            <returns>Amigo</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.AutenticacaoController.Autenticar(Emprestimos.Application.Dto.Request.AutenticacaoRequest)">
+            <summary>
+            Autentica um usuário previamente cadastrado
+            </summary>
+            <param name="request">Dados de autenticação</param>
+            <returns>Usuário autenticado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.EmprestimoController.Inserir(Emprestimos.Application.Dto.Request.EmprestimoRequest)">
+            <summary>
+            Insere um novo Emprestimo
+            </summary>
+            <param name="request">Dados de cadastro do Emprestimo</param>
+            <returns>Emprestimo cadastrado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.EmprestimoController.ObterPorId(System.Int64)">
+            <summary>
+            Obtem um Emprestimo por Id
+            </summary>
+            <param name="id">Id do Emprestimo</param>
+            <returns>Emprestimo obtido</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.EmprestimoController.Obter">
+            <summary>
+            Obtem todos os Emprestimos
+            </summary>
+            <returns>Todos os Emprestimos</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.EmprestimoController.Atualizar(System.Int64,Emprestimos.Application.Dto.Request.EmprestimoRequest)">
+            <summary>
+            Atualiza um Emprestimo
+            </summary>
+            <param name="id">Id do Emprestimo</param>
+            <param name="request">Dados de cadastro do Emprestimo</param>
+            <returns>Emprestimo atualizado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.EmprestimoController.Remover(System.Int64)">
+            <summary>
+            Remove um Emprestimo cadastrado
+            </summary>
+            <param name="id">Id do Emprestimo</param>
+            <returns></returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.EmprestimoController.Devolver(System.Int64)">
+            <summary>
+            Devolve um jogo
+            </summary>
+            <param name="id">Id do emprestimo</param>
+            <returns>emprestimo finalizado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.Inserir(Emprestimos.Application.Dto.Request.JogoRequest)">
+            <summary>
+            Insere um novo jogo
+            </summary>
+            <param name="request">Dados de cadastro do jogo</param>
+            <returns>jogo cadastrado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.ObterPorId(System.Int64)">
+            <summary>
+            Obtem um jogo por Id
+            </summary>
+            <param name="id">Id do jogo</param>
+            <returns>jogo obtido</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.Obter">
+            <summary>
+            Obtem todos os jogos
+            </summary>
+            <returns>Todos os jogos</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.Atualizar(System.Int64,Emprestimos.Application.Dto.Request.JogoRequest)">
+            <summary>
+            Atualiza um jogo
+            </summary>
+            <param name="id">Id do jogo</param>
+            <param name="request">Dados de cadastro do jogo</param>
+            <returns>jogo atualizado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.Remover(System.Int64)">
+            <summary>
+            Remove um jogo cadastrado
+            </summary>
+            <param name="id">Id do jogo</param>
+            <returns></returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.ObterSituacoes">
+            <summary>
+            Obtem todos as situações dos jogos
+            </summary>
+            <returns>Situações dos jogos</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.JogoController.ObterGeneros">
+            <summary>
+            Obtem todos os generos dos jogos
+            </summary>
+            <returns>Generos dos jogos</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.UsuarioController.Inserir(Emprestimos.Application.Dto.Request.UsuarioRequest)">
+            <summary>
+            Insere um novo usuário
+            </summary>
+            <param name="request">Dados de cadastro do usuário</param>
+            <returns>Usuário cadastrado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.UsuarioController.ObterPorId(System.Int64)">
+            <summary>
+            Obtem um usuário por Id
+            </summary>
+            <param name="id">Id do Usuário</param>
+            <returns>Usuário obtido</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.UsuarioController.Obter">
+            <summary>
+            Obtem todos os usuários
+            </summary>
+            <returns>Todos os usuários</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.UsuarioController.Atualizar(System.Int64,Emprestimos.Application.Dto.Request.UsuarioRequest)">
+            <summary>
+            Atualiza um usuário
+            </summary>
+            <param name="id">Id do usuário</param>
+            <param name="request">Dados de cadastro do usuário</param>
+            <returns>Usuário atualizado</returns>
+        </member>
+        <member name="M:Emprestimos.Controllers.UsuarioController.Remover(System.Int64)">
+            <summary>
+            Remove um usuário cadastrado
+            </summary>
+            <param name="id">Id do usuário</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

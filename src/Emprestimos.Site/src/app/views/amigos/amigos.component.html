@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Amigos</h5>
+                </div>
+                <hr>
+                <div class="col-lg-12">
+                    <div class="row botoes-acao">
+                        <button type="button" class="btn btn-dark" (click)="novo()">Novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row registros">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registros</h5>
+                </div>
+                <hr>
+                <table class="table table-responsive-lg table-striped table-bordered table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th style="width: 5% !important;" scope="col">Ações</th>
+                            <th style="width: 5% !important;" scope="col">Id</th>
+                            <th scope="col">Apelido</th>
+                            <th scope="col">Telefone</th>
+                            <th style="width: 15% !important;" scope="col">Jogos Emprestados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let amigo of amigos">
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" (click)="editar(amigo)" >Editar</a>
+                                        <a class="dropdown-item" (click)="excluir(amigo)" >Excluir</a>
+                                        <a *ngIf="amigo.quantidadeDeJogosEmprestados > 1" class="dropdown-item" (click)="devolverTodos(amigo)">Devolver todos os jogos</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{amigo.id}}</td>
+                            <td>{{amigo.apelido}}</td>
+                            <td>{{amigo.telefone}}</td>
+                            <td>{{amigo.quantidadeDeJogosEmprestados}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
