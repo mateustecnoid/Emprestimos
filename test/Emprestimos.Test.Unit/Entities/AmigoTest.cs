@@ -26,6 +26,8 @@ namespace Emprestimos.Test.Unit.Entities
             amigo.Should().NotBeNull();
             amigo.Valid.Should().BeTrue();
 
+            amigo.Atualizar("Outro Apelido", "11111111");
+
             amigo.Should().NotBeNull();
             amigo.Valid.Should().BeTrue();
             amigo.Apelido.Should().NotBe(apelido);
